@@ -11,8 +11,8 @@ function compute() {
         return false;
     }
 
-    //Calculate the amount at the end of the term based on interest rate and number of years.
-    var amount = principal + (principal * years * rate / 100);
+    //Calculate the interest at the end of the term based on interest rate and number of years.
+    var interest = principal * years * rate / 100;
     //Calcualate maturity year for display.
     var year = new Date().getFullYear() + parseInt(years);
 
@@ -20,7 +20,7 @@ function compute() {
     document.getElementById("result").innerHTML = "If you deposit <span class = 'highlight' >"  +
         principal + "</span>,\<br\> at an interest rate of" + 
         "<span class = 'highlight' > " + rate + "%</span>.\<br\>You will receive an amount of " +  
-        "<span class = 'highlight' > " + amount + "</span>,\<br\>in the year <span class='highlight'>" +year + "</span>" ;
+        "<span class = 'highlight' > " + interest + "</span>,\<br\>in the year <span class='highlight'>" +year + "</span>" ;
 
 }
 
