@@ -11,8 +11,10 @@ h1 {
 .maindiv {
     background-color: white;
     color: black;
-    width: 300px;
+    font-size: small;
+    width: 400px;
     padding: 20px;
     border-radius: 25px;
-    align: center;
+    text-align: left;
+    justify-content: center;
 }
