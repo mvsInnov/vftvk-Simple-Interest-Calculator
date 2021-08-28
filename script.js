@@ -1,15 +1,26 @@
 function compute() {
+    //Parse principal amount...this can be float
     var principal = parseFloat(document.getElementById("principal").value);
+    //Parse rate of interest...this can be float
     var rate = parseFloat(document.getElementById("rate").value);
+    //Parse number of years
     var years = document.getElementById("years").value;
 
-    var amount = principal + (principal * years * rate / 100);
-    var year = new Date().getFullYear() + parseInt(years);
-    // interest += principal;
+    if (principal <= 0) {
+        alert("Enter a principal greater than 0 and retry.");
+        return false;
+    }
 
-    document.getElementById("result").innerHTML = "";
-    document.getElementById("result").innerHTML = "If you deposit " + principal + ",\<br\> at an interest rate of " +
-        rate + "%.\<br\>You will receive an amount of " + amount + ",\<br\>in the year " + year;
+    //Calculate the amount at the end of the term based on interest rate and number of years.
+    var amount = principal + (principal * years * rate / 100);
+    //Calcualate maturity year for display.
+    var year = new Date().getFullYear() + parseInt(years);
+
+    //Display the result
+    document.getElementById("result").innerHTML = "If you deposit <span class = 'highlight' >"  +
+        principal + "</span>,\<br\> at an interest rate of" + 
+        "<span class = 'highlight' > " + rate + "%</span>.\<br\>You will receive an amount of " +  
+        "<span class = 'highlight' > " + amount + "</span>,\<br\>in the year <span class='highlight'>" +year + "</span>" ;
 
 }
 

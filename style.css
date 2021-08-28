@@ -18,3 +18,7 @@ h1 {
     text-align: left;
     justify-content: center;
 }
+
+.highlight {
+    background-color: yellow;
+}
