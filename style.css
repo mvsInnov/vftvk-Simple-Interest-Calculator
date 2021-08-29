@@ -15,8 +15,30 @@ h1 {
     width: 400px;
     padding: 20px;
     border-radius: 25px;
+}
+
+.row {
+    padding-left: 85px; 
+    display: flex;
+    flex-direction: row;
+}
+
+.buttondiv{
+    text-align: center;
+}
+
+.resultdiv{
+    padding-left: 85px;
     text-align: left;
-    justify-content: center;
+}
+
+.labeldiv {
+    text-align: left;
+    width: 100px;
+}
+
+.inputdiv {
+    padding-left: 10px;
 }
 
 .highlight {
