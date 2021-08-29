@@ -9,6 +9,7 @@ function compute() {
     //Alert if principal is less than zero or if principal is not a number
     if (Number.isNaN(principal) || (principal <= 0)) {
         alert("Enter a principal greater than 0 and retry.");
+        document.getElementById("principal").focus();
         return false;
     }
 
