@@ -7,7 +7,7 @@ function compute() {
     var years = document.getElementById("years").value;
 
     //Alert if principal is less than zero or if principal is not a number
-    if (isNaN(principal) || (principal <= 0)) {
+    if (Number.isNaN(principal) || (principal <= 0)) {
         alert("Enter a principal greater than 0 and retry.");
         return false;
     }
