@@ -8,7 +8,7 @@ function compute() {
 
     //Alert if principal is less than zero or if principal is not a number
     if (Number.isNaN(principal) || (principal <= 0)) {
-        alert("Enter a principal greater than 0 and retry.");
+        alert("Enter a positive number in principal input and retry.");
         //put the focus back on principal input
         setTimeout(function(){
                 document.getElementById("principal").focus();
